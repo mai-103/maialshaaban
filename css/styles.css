@@ -1,20 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 :root {
   --header-height: 3rem;
-  /* Colors */
-  --hue-color: 169;
-  --first-color: hsl(var(--hue-color), 26%, 75%);
-  --first-color-second: hsl(166, 30%, 56%);
-  --first-color-alt: hsl(167, 43%, 64%);
-  --first-color-lighter: hsl(167, 13%, 43%);
-  --title-color: hsl(var(--hue-color), 8%, 15%);
-  --text-color: hsl(var(--hue-color), 8%, 45%);
-  --text-color-light: hsl(var(--hue-color), 8%, 65%);
-  --input-color: hsl(var(--hue-color), 70%, 96%);
-  --body-color: hsl(var(--hue-color), 60%, 99%);
-  --container-color: #fff;
-  --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
-  --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
+    /* Colors */
+    --hue-color: 197; /* ✅ baby blue hue */
+
+    --first-color: hsl(var(--hue-color), 76%, 66%);        /* main baby blue */
+    --first-color-second: hsl(var(--hue-color), 76%, 66%); /* lighter variant */
+    --first-color-alt: hsl(var(--hue-color), 61%, 47%);    /* darker variant */
+    
+    --title-color: hsl(var(--hue-color), 90%, 20%);        /* deep blue text */
+    --text-color: hsl(var(--hue-color), 70%, 30%);         /* bluish gray text */
+    --text-color-light: hsl(var(--hue-color), 60%, 50%);   /* light blue text */
+    
+    --input-color: hsl(var(--hue-color), 76%, 66%);       /* very pale baby blue background */
+    --body-color: #fffaf0;        /* lightest page background */
+    --container-color: hsl(var(--hue-color), 100%, 95%);   /* subtle box background */
+    
+    --scroll-bar-color: hsl(var(--hue-color), 50%, 85%);
+    --scroll-thumb-color: hsl(var(--hue-color), 60%, 70%);
+    
+
   /* Font & typography */
   --body-font: "Poppins", sans-serif;
   --big-font-size: 2rem;
@@ -57,11 +62,11 @@
 }
 /* Dark mode */
 body.dark-theme {
-  --first-color-second: hsl(167, 24%, 42%);
+  --first-color-second: hsl(var(--hue-color), 76%, 66%); 
   --first-color-lighter: hsl(210, 11%, 25%);
   --title-color: hsl(var(--hue-color), 8%, 95%);
   --text-color: hsl(var(--hue-color), 8%, 75%);
-  --input-color: hsl(167, 25%, 39%);
+  --input-color: hsl(var(--hue-color), 76%, 66%);
   --body-color: hsl(210, 11%, 25%);
   --container-color: hsl(var(--hue-color), 29%, 16%);
   --scroll-bar-color: hsl(var(--hue-color), 12%, 48%);
@@ -643,7 +648,7 @@ img {
   width: 100%;
   background-color: var(--input-color);
   border: none;
-  color: var(--text-color);
+  color: #fff2d9;
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   outline: none;
@@ -988,3 +993,93 @@ img {
     margin-left: var(--mb-1);
   }
 }/*# sourceMappingURL=styles.css.map */
+
+.honors-circle-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.honors-card {
+  width: 180px;
+  height: 180px;
+  perspective: 1000px;
+}
+
+.honors-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease;
+}
+
+.honors-card:hover .honors-inner,
+.honors-card:focus-within .honors-inner {
+  transform: rotateY(180deg);
+}
+
+.honors-front,
+.honors-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  backface-visibility: hidden;
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  padding: 1rem;
+  text-align: center;
+}
+
+.honors-front {
+  background: linear-gradient(135deg, hsl(var(--hue-color), 76%, 66%), hsl(var(--hue-color), 76%, 66%));
+}
+
+.honors-back {
+  background: hsl(var(--hue-color), 76%, 73%);
+  transform: rotateY(180deg);
+  font-size: 0.9rem;
+  padding: 1rem;
+}
+
+.honors-icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.honors-title {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.honors-subtitle {
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+
+/* Section styling */
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 0.2rem;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 1rem;
+  color: #888;
+  margin-bottom: 2rem;
+}
+
+.experience-data.empty-entry {
+  visibility: hidden;
+  pointer-events: none;
+  height: 100px; /* adjust this height to roughly match your experience-data blocks */
+}
