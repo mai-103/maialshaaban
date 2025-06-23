@@ -6,15 +6,16 @@
   </a>
 </p>
 <p align="center">
-  <span style="font-size: larger;">A professional, minimalist portfolio</span>
+  <span style="font-size: larger;">A sleek, modern, and distraction-free portfolio</span>
 </p>
 
 
-<div align="center">
-  <img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5 badge" title="HTML" />
-  <img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E" alt="JavaScript badge" title="JavaScript" />
-  <img src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white" alt="Sass badge" title="Sass" />
+<div align="center" style="font-size: 1rem; font-weight: 500;">
+  <span style="margin: 0 10px;">HTML5</span> |
+  <span style="margin: 0 10px;">JavaScript</span> |
+  <span style="margin: 0 10px;">Sass</span>
 </div>
+
 
 <p align="center">
   <a href="https:/github.com/JuditKaramazov">🐱 /JuditKaramazov</a>
