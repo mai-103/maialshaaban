@@ -1,9 +1,7 @@
 # Mai Al Shaaban
 
 <p align="center">
-  <a href="https://mariabrio.vercel.app">
     <img src="/assets/favicon/android-chrome-192x192.png" width="70" alt="Portfolio's favicon.">
-  </a>
 </p>
 <p align="center">
   <span style="font-size: larger;">A sleek, modern, and distraction-free portfolio</span>
