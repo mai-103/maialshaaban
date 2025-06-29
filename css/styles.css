@@ -19,7 +19,6 @@
     --scroll-bar-color: hsl(var(--hue-color), 50%, 85%);
     --scroll-thumb-color: hsl(var(--hue-color), 60%, 70%);
     
-
   /* Font & typography */
   --body-font: "Poppins", sans-serif;
   --big-font-size: 2rem;
