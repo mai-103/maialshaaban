@@ -1102,19 +1102,6 @@ img {
   --scroll-thumb-color: hsl(var(--hue-color), 60%, 70%);
 }
 
-#moments-gallery {
-  max-width: 600px;
-  margin: 60px auto;
-  text-align: center;
-  font-family: "Segoe UI", sans-serif;
-}
-
-#moments-gallery h2 {
-  font-size: 1.8rem;
-  margin-bottom: 20px;
-  color: var(--title-color);
-}
-
 .carousel-wrapper {
 position: relative;
 display: flex;
