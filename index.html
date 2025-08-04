@@ -15,11 +15,21 @@
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon//favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon//favicon-16x16.png">
     <link rel="manifest" href="assets/favicon//site.webmanifest">
-    <title>Mai Al Shaaban | Portfolio</title>
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <!-- MarkerCluster CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css" />
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <!-- MarkerCluster JS -->
+    <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
+    <title>Mai Al Shaaban</title>
 </head>
 
 <body>
     <!-- Header -->
+      
     <header class="header" id="header">
         <nav class="nav container">
             <a href="#" class="nav-logo">Mai</a>
@@ -65,6 +75,7 @@
                             <i class="fas fa-envelope nav-link-icon"></i> Contact
                         </a>
                     </li>
+
                 </ul>
                 <i class="fas fa-times nav-close" id="nav-close"></i>
             </div>
@@ -132,6 +143,7 @@
                         <i class="fas fa-arrow-down home-scroll-button-arrow"></i>
                     </a>
                 </div>
+                  
             </div>
         </section>
 
@@ -140,13 +152,13 @@
         <!-- About section -->
         <section class="about section" id="about">
             <h2 class="section-title">About Me</h2>
-            <span class="section-subtitle">June, 2025</span>
+            <span class="section-subtitle">August, 2025</span>
 
             <div class="about-container container">
 
                 <div class="about-container-data" style="width: 100%;">
 
-                    <p class="about-container-data-description">Rising senior pursuing a degree in Applied Mathematics and Computer Science. Currently a research fellow with the Yale Mathematics Department's Summer 2025 program, where I’m working on Machine Learning applications in Computational Fluid Dynamics (CFD). <br> <br> When I'm not buried in code or equations, you'll find me doing jigsaw puzzles (obsessively!), crocheting cozy things, or maybe going on hikes.</p>
+                    <p class="about-container-data-description">Rising senior pursuing a degree in Applied Mathematics and Computer Science. Currently finalizing my research after two months as a fellow with the Yale Mathematics Department's Summer 2025 program, where I’ve been working on Machine Learning applications in Computational Fluid Dynamics (CFD).<br> <br> When I'm not buried in code or equations, you'll find me doing jigsaw puzzles (obsessively!), crocheting cozy things, or maybe going on hikes.</p>
 
                     <div class="about-container-data-info">
                         <div>
@@ -476,55 +488,81 @@
                 </div>
             </div>
             
-            <!-- Experience content 2: Work -->
-                    <!-- Experience section 2: first element -->
-                    <div class="experience-content" data-content id="work">
-                        <div class="experience-data">
-                            <div class="experience-data-alt">
-                                <img src="img/juvena-logo.png" alt="Juvena Logo" style="width: 100px; height: auto;">
-                                <h3 class="experience-title">Data Science Intern</h3>
-                                <span class="experience-subtitle">Juven Therapeutics</span>
-                                <div class="experience-calendar">
-                                    <i class="fas fa-calendar-alt"></i>
-                                    May 2024 - Dec. 2024
-                                </div>
-                            </div>
-                            <div>
-                                <span class="experience-rounder"></span>
-                                <span class="experience-line"></span>
-                            </div>
-                        </div>
-                    <!-- Experience section 2: second element -->
-                        <div class="experience-data">
-                            <div></div>
-                            <div>
-                                <span class="experience-rounder"></span>
-                                <span class="experience-line"></span>
-                            </div>
-                            <div class="experience-data-alt">
-                                <img src="img/siue.png" alt="SIUE Logo" style="width: 100px; height: auto;">
-                                <h3 class="experience-title">Teaching Assistant</h3>
-                                <span class="experience-subtitle">Southern Illinois University-Edwardsville (SIUE) <br> Department of Mathematics anf Statistics</span>
-                                <div class="experience-calendar">
-                                    <i class="fas fa-calendar-alt"></i>
-                                    Aug. 2023 - Dec. 2023
-                                </div>
-                            </div>
-                        </div>
-                    <!-- Experience section 2: third element -->
-                         <div class="experience-data">
-                            <div class="experience-data-alt">
-                                <img src="img/siue.png" alt="SIUE Logo" style="width: 100px; height: auto;">
-                                <h3 class="experience-title">Resident Assistant</h3>
-                                <span class="experience-subtitle">Southern Illinois University-Edwardsville (SIUE)<br> Housing </span>
-                                <div class="experience-calendar">
-                                    <i class="fas fa-calendar-alt"></i>
-                                    March 2023 - Dec. 2023
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+<!-- Experience content 2: Work -->
+<div class="experience-content" data-content id="work">
 
+    <!-- Entry 1: LEFT -->
+    <div class="experience-data">
+        <div class="experience-data-alt">
+            <img src="img/Brandeis University.png" alt="Brandeis Logo" style="width: 170px; height: auto;">
+            <h3 class="experience-title"> Teaching Assistant <br>Advanced Techniques in Java</h3>
+            <span class="experience-subtitle">Brandeis University Michtom School of Computer Science</span>
+            <div class="experience-calendar">
+                <i class="fas fa-calendar-alt"></i>
+                July 2025 - Present
+            </div>
+        </div>
+        <div>
+            <span class="experience-rounder"></span>
+            <span class="experience-line"></span>
+        </div>
+        <div></div>
+    </div>
+
+    <!-- Entry 2: RIGHT -->
+    <div class="experience-data">
+        <div></div>
+        <div>
+            <span class="experience-rounder"></span>
+            <span class="experience-line"></span>
+        </div>
+        <div class="experience-data-alt">
+            <img src="img/juvena-logo.png" alt="Juvena Logo" style="width: 100px; height: auto;">
+            <h3 class="experience-title">Data Science Intern</h3>
+            <span class="experience-subtitle">Juven Therapeutics</span>
+            <div class="experience-calendar">
+                <i class="fas fa-calendar-alt"></i>
+                May 2024 - Dec. 2024
+            </div>
+        </div>
+    </div>
+
+    <!-- Entry 3: LEFT -->
+    <div class="experience-data">
+        <div class="experience-data-alt">
+            <img src="img/siue.png" alt="SIUE Logo" style="width: 100px; height: auto;">
+            <h3 class="experience-title">Teaching Assistant</h3>
+            <span class="experience-subtitle">Southern Illinois University-Edwardsville (SIUE) <br> Department of Mathematics anf Statistics</span>
+            <div class="experience-calendar">
+                <i class="fas fa-calendar-alt"></i>
+                Aug. 2023 - Dec. 2023
+            </div>
+        </div>
+        <div>
+            <span class="experience-rounder"></span>
+            <span class="experience-line"></span>
+        </div>
+        <div></div>
+    </div>
+
+    <!-- Entry 4: RIGHT -->
+    <div class="experience-data">
+        <div></div>
+        <div>
+            <span class="experience-rounder"></span>
+            <span class="experience-line"></span>
+        </div>
+        <div class="experience-data-alt">
+            <img src="img/siue.png" alt="SIUE Logo" style="width: 100px; height: auto;">
+            <h3 class="experience-title">Resident Assistant</h3>
+            <span class="experience-subtitle">Southern Illinois University-Edwardsville (SIUE)<br> Housing </span>
+            <div class="experience-calendar">
+                <i class="fas fa-calendar-alt"></i>
+                March 2023 - Dec. 2023
+            </div>
+        </div>
+    </div>
+</div>
         <!-- Experience content 3: Research -->
                     <!-- Experience section 3: first element -->
                     <div class="experience-content" data-content id="research">
@@ -730,58 +768,124 @@
     </div>
   </div>  
 
-                     <!-- Experience section 3: first element -->
-                     <div class="experience-content" data-content id="conferences">
-                        <div class="experience-data">
-                            <div class="experience-data-alt">
-                                <img src="img/Harvard-Business-School-Logo-500x281.png" alt="Harvard Business School Logo" style="width: 160px; height: auto;">
-                                <h3 class="experience-title">Attendee <i class="fas fa-certificate" title="Award"></i></h3>
-                                <span class="experience-subtitle">33rd Annual Technology Conference at Harvard Business School</span>
-                                <span class="experience-subtitle">Cambridge, MA</span>
-                                <div class="experience-calendar">
-                                    <i class="fas fa-calendar-alt"></i>
-                                    April 2025
-                                </div>
-                            </div>
-                            <div>
-                                <span class="experience-rounder"></span>
-                                <span class="experience-line"></span>
-                            </div>
-                        </div>
-                    <!-- Experience section 3: second element -->
-                        <div class="experience-data">
-                            <div></div>
-                            <div>
-                                <span class="experience-rounder"></span>
-                                <span class="experience-line"></span>
-                            </div>
-                            <div class="experience-data-alt">
-                                <img src="img/nchc.webp" alt="NCHC Logo" style="width: 170px; height: auto;">
-                                <h3 class="experience-title"> Attendee <i class="fas fa-certificate" title="Award"></i></h3>
-                                <span class="experience-subtitle">The National Collegiate Honors Council (NCHC) Annual Conference </span>
-                                <span class="experience-subtitle">Chicago, IL</span>
-                                <div class="experience-calendar">
-                                    <i class="fas fa-calendar-alt"></i>
-                                    Nov 2023
-                                </div>
-                            </div>
-                        </div>
-                    <!-- Experience section 3: third element -->
-                         <div class="experience-data">
-                            <div class="experience-data-alt">
-                                <img src="img/csca_logo.png" alt="CSCA Logo" style="width: 150px; height: auto;">
-                                <h3 class="experience-title"> Paper Presenter <i class="fas fa-certificate" title="Award"></i></h3>
-                                <span class="experience-subtitle">The Annual Central States Communication Association (CSCA) Conference </span>
-                                <span class="experience-subtitle">St. Louis, MO </span>
-                                <div class="experience-calendar">
-                                    <i class="fas fa-calendar-alt"></i>
-                                    April 2023
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-  
-               
+<!-- Experience section 3: Conferences -->
+<div class="experience-content" data-content id="conferences">
+
+    <!-- NEW item 1 (left) -->
+    <div class="experience-data">
+        <div class="experience-data-alt">
+            <img src="img/Ohio_State_Buckeyes_logo.svg" alt="OSU Logo" style="width: 80px; height: auto;">
+            <h3 class="experience-title">Presenter <br> (20 mins talk)</h3>
+            <span class="experience-subtitle">Young Mathematicians Conference (YMC) <br> Ohio State University (OSU)</span>
+            <span class="experience-subtitle">Columbus, OH</span>
+            <div class="experience-calendar">
+                <i class="fas fa-calendar-alt"></i>
+                July 2025
+            </div>
+        </div>
+        <div>
+            <span class="experience-rounder"></span>
+            <span class="experience-line"></span>
+        </div>
+    </div>
+
+    <!-- NEW item 2 (right, two logos) -->
+    <div class="experience-data">
+        <div></div>
+        <div>
+            <span class="experience-rounder"></span>
+            <span class="experience-line"></span>
+        </div>
+        <div class="experience-data-alt">
+            <div style="display: flex; gap: 10px; align-items: center;">
+                <img src="img/yale-logo.png" alt="Yale Logo" style="width: 150px; height: auto;">
+                <img src="img/Williams_College_Seal.svg.png" alt="Williams Logo" style="width: 70px; height: auto;">
+            </div>
+            <h3 class="experience-title">Presenter <br> (20 mins talk)</h3>
+            <span class="experience-subtitle">Yale University and Williams College <br> Mini Mathematics Conference</span>
+            <span class="experience-subtitle">New Haven, CT</span>
+            <div class="experience-calendar">
+                <i class="fas fa-calendar-alt"></i>
+                July 2025
+            </div>
+        </div>
+    </div>
+
+    <!-- NEW item 3 (left) -->
+    <div class="experience-data">
+        <div class="experience-data-alt">
+            <img src="img/Jane_Street_Capital_Logo.svg.png" alt="Jane Street Logo" style="width: 120px; height: auto;">
+            <h3 class="experience-title">Poster Presenter</h3>
+            <span class="experience-subtitle">Jane Street NYC Mathematics Day</span>
+            <span class="experience-subtitle">New York City, NY</span>
+            <div class="experience-calendar">
+                <i class="fas fa-calendar-alt"></i>
+                July 2022
+            </div>
+        </div>
+        <div>
+            <span class="experience-rounder"></span>
+            <span class="experience-line"></span>
+        </div>
+    </div>
+
+    <!-- Original item: Harvard (right) -->
+    <div class="experience-data">
+        <div></div>
+        <div>
+            <span class="experience-rounder"></span>
+            <span class="experience-line"></span>
+        </div>
+        <div class="experience-data-alt">
+            <img src="img/Harvard-Business-School-Logo-500x281.png" alt="Harvard Business School Logo" style="width: 160px; height: auto;">
+            <h3 class="experience-title">Attendee <i class="fas fa-certificate" title="Award"></i></h3>
+            <span class="experience-subtitle">33rd Annual Technology Conference at Harvard Business School</span>
+            <span class="experience-subtitle">Cambridge, MA</span>
+            <div class="experience-calendar">
+                <i class="fas fa-calendar-alt"></i>
+                April 2025
+            </div>
+        </div>
+    </div>
+
+    <!-- Original item: NCHC (left) -->
+    <div class="experience-data">
+        <div class="experience-data-alt">
+            <img src="img/nchc.webp" alt="NCHC Logo" style="width: 170px; height: auto;">
+            <h3 class="experience-title">Attendee <i class="fas fa-certificate" title="Award"></i></h3>
+            <span class="experience-subtitle">The National Collegiate Honors Council (NCHC) Annual Conference</span>
+            <span class="experience-subtitle">Chicago, IL</span>
+            <div class="experience-calendar">
+                <i class="fas fa-calendar-alt"></i>
+                Nov 2023
+            </div>
+        </div>
+        <div>
+            <span class="experience-rounder"></span>
+            <span class="experience-line"></span>
+        </div>
+    </div>
+
+    <!-- Original item: CSCA (right) -->
+    <div class="experience-data">
+        <div></div>
+        <div>
+            <span class="experience-rounder"></span>
+        </div>
+        <div class="experience-data-alt">
+            <img src="img/csca_logo.png" alt="CSCA Logo" style="width: 150px; height: auto;">
+            <h3 class="experience-title">Paper Presenter <i class="fas fa-certificate" title="Award"></i></h3>
+            <span class="experience-subtitle">The Annual Central States Communication Association (CSCA) Conference</span>
+            <span class="experience-subtitle">St. Louis, MO</span>
+            <div class="experience-calendar">
+                <i class="fas fa-calendar-alt"></i>
+                April 2023
+            </div>
+        </div>
+    </div>
+
+</div>
+            
 
 </section>        
     
@@ -997,8 +1101,69 @@
   
     </div>
   </section>
+<!-- LightGallery CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/css/lightgallery-bundle.min.css"/>
+
+<section id="moments-gallery">
+  <h2>Indexed Moments {mₙ}</h2>
+  <p class="section-subtitle">
+    Snapshots taken along the way... from conferences to campus life and beyond.
+  </p>  
+  <div class="carousel-wrapper">
+    <div class="carousel">
+      <img id="carousel-image" src="img/jane2.PNG" alt="Gallery Image">
+    </div>
+    <button class="carousel-btn left" onclick="prevImage()">&#8249;</button>
+    <button class="carousel-btn right" onclick="nextImage()">&#8250;</button>
+  </div>
   
-     
+  <p id="caption">From the Poster Session at Jane Steeet NYC Math Day (1), July 2025/p>
+</section>
+
+<script>
+  const images = [
+    { src: "img/jane2.PNG", caption: "From the Poster Session at Jane Steeet NYC Math Day (1), July 2025" },
+    { src: "img/jane1.PNG", caption: "From the Poster Session at Jane Steeet NYC Math Day (2), July 2025" },
+    { src: "img/ymc.jpeg", caption: "Young Mathematicians Conference (YMC), July 2025" },
+    { src: "img/ymc1.PNG", caption: "From my Talk at YMC (1), August 2025" },
+    { src: "img/ymc2.PNG", caption: "From my Talk at YMC (2), August 2025" },
+    { src: "img/ymc3.PNG", caption: "From my Talk at YMC (3), August 2025" },
+    { src: "img/gwc3.PNG", caption: "GWC 2024-2025 Eboard Attending a Conference at HBS, April 2025" },
+    { src: "img/sumry.jpg", caption: "SUMRY Research Groups Pictures on the Wall, June 2025" },
+    { src: "img/gwc1.jpg", caption: "GWC Celebrating 2025-2026 Elections and Earning Best New Club of the Year Award, May 2025" },
+    { src: "img/juvena.jpeg", caption: "Celebrating Moments Being Summer Intern at Juvena Therapeutics, August 2024" },
+    { src: "img/sye.JPG", caption: "SYE Reunion, June 2024" },
+    { src: "img/moveIn_siue.JPG", caption: "Cougar Village RAs in Move-in Day at SIUE, August 2023" },
+    { src: "img/siue_move_in2.jpg", caption: "Cougar Village RAs in Move-in Day at SIUE, August 2023" },
+    { src: "img/tas_calc.JPG", caption: "From TAs in Calculus meeting, September 2023" },
+    { src: "img/nsdc1.jpg", caption: "The National School Debating Championship in Syria (NSDC), 2020" },
+    { src: "img/nsdc2.jpg", caption: "Rif Dimashq Team, NSDC 2020" },
+  ];
+
+  let currentIndex = 0;
+
+  function showImage(index) {
+    const img = document.getElementById("carousel-image");
+    const caption = document.getElementById("caption");
+    img.style.opacity = 0;
+    setTimeout(() => {
+      img.src = images[index].src;
+      caption.textContent = images[index].caption;
+      img.style.opacity = 1;
+    }, 150);
+  }
+
+  function prevImage() {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    showImage(currentIndex);
+  }
+
+  function nextImage() {
+    currentIndex = (currentIndex + 1) % images.length;
+    showImage(currentIndex);
+  }
+</script>
+
     </main>
 
     <!-- Footer -->
@@ -1045,6 +1210,6 @@
     <script src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
     <script src="js/swiper-bundle.js"></script>
     <script src="js/main.js"></script>
-
+       
     </body>
 </html>

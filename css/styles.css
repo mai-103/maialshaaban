@@ -1082,3 +1082,103 @@ img {
   pointer-events: none;
   height: 100px; /* adjust this height to roughly match your experience-data blocks */
 }
+
+:root {
+  --hue-color: 197;
+
+  --first-color: hsl(var(--hue-color), 76%, 66%);
+  --first-color-second: hsl(var(--hue-color), 76%, 66%);
+  --first-color-alt: hsl(var(--hue-color), 61%, 47%);
+  
+  --title-color: hsl(var(--hue-color), 90%, 20%);
+  --text-color: hsl(var(--hue-color), 70%, 30%);
+  --text-color-light: hsl(var(--hue-color), 60%, 50%);
+  
+  --input-color: hsl(var(--hue-color), 76%, 66%);
+  --body-color: #fffaf0;
+  --container-color: hsl(var(--hue-color), 100%, 95%);
+  
+  --scroll-bar-color: hsl(var(--hue-color), 50%, 85%);
+  --scroll-thumb-color: hsl(var(--hue-color), 60%, 70%);
+}
+
+#moments-gallery {
+  max-width: 600px;
+  margin: 60px auto;
+  text-align: center;
+  font-family: "Segoe UI", sans-serif;
+}
+
+#moments-gallery h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: var(--title-color);
+}
+
+.carousel-wrapper {
+position: relative;
+display: flex;
+align-items: center;
+justify-content: center;
+max-width: 600px;
+margin: 0 auto;
+}
+
+.carousel {
+  border-radius: 12px;
+  box-shadow: 0 0 15px var(--first-color-second);
+  padding: 10px;
+}
+
+.carousel img {
+max-height: 300px;
+max-width: 100%;
+object-fit: cover;
+border-radius: 8px;
+transition: opacity 0.3s ease;
+}
+
+.carousel-btn {
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+background: var(--first-color);
+border: none;
+padding: 10px 14px;
+font-size: 20px;
+cursor: pointer;
+z-index: 2;
+color: white;
+border-radius: 50%;
+box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+transition: background 0.3s ease;
+}
+
+.carousel-btn.left {
+left: -40px; /* fully outside the box */
+}
+
+.carousel-btn.right {
+right: -40px;
+}
+
+.carousel-btn:hover {
+background: var(--first-color-alt);
+}
+
+.section-subtitle {
+  font-size: 0.95rem;
+  color: var(--text-color-light);
+  margin-top: -10px;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+#caption {
+  margin-top: 20px;  /* <- adjust this number to move it further */
+  font-size: 0.95rem;
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+
