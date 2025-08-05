@@ -1113,8 +1113,8 @@
     <div class="carousel">
       <img id="carousel-image" src="img/jane2.PNG" alt="Gallery Image">
     </div>
-    <button class="carousel-btn left" onclick="prevImage()">&#8249;</button>
-    <button class="carousel-btn right" onclick="nextImage()">&#8250;</button>
+    <button class="carousel-btn left" onclick="prevImage()" aria-label="Previous Image">&#8249;</button>
+    <button class="carousel-btn right" onclick="nextImage()" aria-label="Next Image">&#8250;</button>    
   </div>
   <p id="caption">
       From the Poster Session at Jane Street NYC Math Day (1), July 2025 
@@ -1136,23 +1136,35 @@
     { src: "img/sye.JPG", caption: "SYE Reunion, June 2024" },
     { src: "img/moveIn_siue.JPG", caption: "Cougar Village RAs in Move-in Day at SIUE, August 2023" },
     { src: "img/siue_move_in2.jpg", caption: "Cougar Village RAs in Move-in Day at SIUE, August 2023" },
-    { src: "img/tas_calc.JPG", caption: "From TAs in Calculus meeting, September 2023" },
+    { src: "img/tas_calc.JPG", caption: "From Calculus TAs meeting, September 2023" },
     { src: "img/nsdc1.jpg", caption: "The National School Debating Championship in Syria (NSDC), 2020" },
     { src: "img/nsdc2.jpg", caption: "Rif Dimashq Team, NSDC 2020" },
   ];
 
   let currentIndex = 0;
 
-  function showImage(index) {
-    const img = document.getElementById("carousel-image");
-    const caption = document.getElementById("caption");
-    img.style.opacity = 0;
-    setTimeout(() => {
-      img.src = images[index].src;
-      caption.textContent = images[index].caption;
-      img.style.opacity = 1;
-    }, 150);
+  document.addEventListener('keydown', (e) => {
+  if (e.key === "ArrowLeft") {
+    prevImage();
+  } else if (e.key === "ArrowRight") {
+    nextImage();
   }
+});
+
+  function showImage(index) {
+  const img = document.getElementById("carousel-image");
+  const caption = document.getElementById("caption");
+  img.style.opacity = 0;
+  setTimeout(() => {
+    img.src = images[index].src;
+    caption.textContent = images[index].caption;
+    img.style.opacity = 1;
+    img.alt = images[index].caption;
+  }, 300); // match transition duration
+
+}
+
+
 
   function prevImage() {
     currentIndex = (currentIndex - 1 + images.length) % images.length;
