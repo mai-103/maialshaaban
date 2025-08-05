@@ -1169,14 +1169,6 @@ right: -40px;
 background: var(--first-color-alt);
 }
 
-.section-subtitle {
-  font-size: 0.95rem;
-  color: var(--text-color-light);
-  margin-top: -10px;
-  margin-bottom: 20px;
-  font-style: italic;
-}
-
 #caption {
   margin-top: 12px;
   font-size: 1rem;
