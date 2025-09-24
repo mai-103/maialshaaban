@@ -596,10 +596,6 @@ img {
   left: -0.5rem;
 }
 
-.swiper-container-horizontal > .swiper-pagination-bullets {
-  bottom: -2.5rem;
-}
-
 .swiper-pagination-bullet-active {
   background-color: var(--first-color);
 }
@@ -970,9 +966,6 @@ img {
   .swiper-button-next {
     right: -3.5rem !important;
   }
-  .swiper-container-horizontal > .swiper-pagination-bullets {
-    bottom: -4.5rem;
-  }
   .footer-container {
     display: flex;
     justify-content: space-between;
@@ -1181,9 +1174,412 @@ background: var(--first-color-alt);
   margin-right: auto;
 }
 
+.publications-card.vertical {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  max-width: 700px;       /* was 600 → now larger */
+  margin: 0 auto;
+}
+
+.pub-thumb-link {
+  display: block;
+  width: 100%;
+  max-width: 650px;       /* was 500 → now larger */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  margin: 0 auto;         /* ensure centered */
+}
+
+.pub-thumb {
+  width: 100%;
+  height: 400px;          /* set fixed height for uniform look */
+  object-fit: cover;      /* keeps aspect clean without distortion */
+  border-radius: 12px;    /* optional: match parent radius */
+}
 
 
+.talks-container {
+  display: grid;
+  gap: 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.talk-item {
+  background: var(--container-color, #fff);
+  border: 1px solid rgba(0,0,0,.06);
+  border-radius: 14px;
+  padding: 1rem 1.25rem;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+}
+
+.talk-meta {
+  display: flex; gap: .5rem; align-items: center;
+  margin-bottom: .25rem;
+  font-size: .9rem; color: var(--text-color-light, #5b6b73);
+}
+
+.talk-kind {
+  padding: 2px 8px;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  font-size: .78rem;
+}
+
+.talk-date {
+  margin-left: .25rem;
+}
+
+.talk-title { margin: .1rem 0 .15rem; line-height: 1.35; }
+.talk-venue { margin: 0; color: var(--text-color-light, #5b6b73); }
+
+.talk-actions { margin-top: .6rem; display: flex; gap: .5rem; }
+.button.ghost { background: transparent; border: 1px solid currentColor; }
+
+/* ===== Research Interests (grid) ===== */
+.ri-grid { margin-top: 2rem; }
+.ri-grid .h3 { margin-bottom: 1rem; color: var(--title-color); }
+
+.riGrid-list {
+  --gap: 14px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--gap);
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: 700px) {
+  .riGrid-list { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+.riGrid-item {
+  display: flex; align-items: center; gap: .75rem;
+  padding: .85rem 1rem;
+  background: var(--container-color);
+  border: 1px solid hsl(var(--hue-color), 40%, 88%);
+  border-radius: 16px;
+  color: var(--title-color);
+  transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+}
+
+.riGrid-item:hover, .riGrid-item:focus-within {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px hsl(var(--hue-color), 60%, 60%, .18);
+  background: hsl(var(--hue-color), 100%, 98%);
+}
+
+.riGrid-ico {
+  width: 24px; height: 24px;
+  color: var(--first-color-alt);
+}
+
+/* ===== Current Roles (two-column list) ===== */
+.roles-list { margin-top: 2.25rem; }
+.roles-list .h3 { margin-bottom: 1rem; color: var(--title-color); }
+
+.rolesList-grid {
+  --gap: 14px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--gap);
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: 720px) {
+  .rolesList-grid { grid-template-columns: 1fr 1fr; }
+}
+
+.rolesList-item {
+  display: flex; gap: .9rem; align-items: flex-start;
+  background: #fff; /* keep lighter than container for contrast */
+  border: 1px solid hsl(var(--hue-color), 40%, 88%);
+  border-radius: 16px;
+  padding: 1rem 1.1rem;
+  box-shadow: 0 2px 6px hsl(var(--hue-color), 40%, 70%, .15);
+  transition: box-shadow .15s ease, transform .15s ease;
+}
+
+.rolesList-item:hover { transform: translateY(-2px); box-shadow: 0 8px 20px hsl(var(--hue-color), 60%, 60%, .18); }
+
+.rolesList-ico {
+  width: 26px; height: 26px; flex: 0 0 auto;
+  color: var(--first-color-alt);
+}
+
+.rolesList-item strong {
+  display: block; font-weight: 700; color: var(--title-color); line-height: 1.25;
+}
+
+.rolesList-item em {
+  display: block; font-style: normal; color: var(--text-color); opacity: .9;
+  margin-top: .25rem; line-height: 1.35;
+}
+
+/* ===== Labs split card ===== */
+.labs-card { margin-top: 2rem; }
+.labs-card .h3 { margin-bottom: .75rem; color: var(--title-color); }
+
+.labs-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+@media (min-width: 760px) {
+  .labs-grid { grid-template-columns: 1fr 1fr; }
+}
+
+.lab-pane {
+  background: #fff;
+  border: 1px solid hsl(var(--hue-color), 40%, 88%);
+  border-radius: 16px;
+  padding: 1rem 1.1rem;
+  box-shadow: 0 2px 6px hsl(var(--hue-color), 40%, 70%, .12);
+}
+
+.lab-sub {
+  margin: 0 0 .4rem 0;
+  color: var(--first-color-alt);
+  font-weight: 700;
+}
+.labs-card p { color: var(--text-color); line-height: 1.5; }
+
+.about-aside {
+  margin-top: 2rem;   /* ✅ adds vertical space above */
+  font-style: normal; /* ✅ removes italics */
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.riGrid-item,
+.rolesList-item,
+.lab-pane {
+  background: var(--container-color);  /* ✅ same light blue as Research Interests */
+}
+.riGrid-item,
+.rolesList-item,
+.lab-pane {
+  border: none;        /* ✅ cleaner, remove border lines */
+  box-shadow: none;    /* ✅ optional, removes shadows */
+}
 
 
+.skills-container.container.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
 
+#classes {
+  grid-column: 1 / -1;   /* ✅ span full width of the grid */
+  justify-self: center;  /* ✅ center horizontally */
+  width: 60%;            /* adjust to taste */
+}
+
+/* ===== Talks timeline ===== */
+.talks-timeline {
+  position: relative;
+  padding-left: 28px;               /* space for the rail */
+}
+
+.talks-timeline::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: hsl(var(--hue-color), 40%, 85%);
+}
+
+.talk-card {
+  position: relative;
+  margin: 1rem 0 1.25rem;
+  padding: 1rem 1.1rem;
+  background: var(--container-color);
+  border-radius: 16px;
+  border: 1px solid hsl(var(--hue-color), 40%, 88%);
+  box-shadow: 0 2px 8px hsl(var(--hue-color), 40%, 70%, .12);
+}
+
+.talk-dot {
+  position: absolute;
+  left: -22px;                      /* centers dot on the rail */
+  top: 1.25rem;
+  width: 12px;
+  height: 12px;
+  background: var(--first-color);
+  border: 2px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px hsl(var(--hue-color), 40%, 85%);
+}
+
+.talk-head {
+  display: flex;
+  gap: .75rem;
+  align-items: baseline;
+  flex-wrap: wrap;
+  margin-bottom: .35rem;
+}
+
+.talk-kind {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  padding: .2rem .55rem;
+  border-radius: 999px;
+  font-size: .8rem;
+  background: hsl(var(--hue-color), 90%, 94%);
+  color: var(--first-color-alt);
+  border: 1px solid hsl(var(--hue-color), 70%, 80%);
+}
+
+.talk-date {
+  margin-left: auto;
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+.talk-title {
+  margin: .15rem 0 .25rem;
+  color: var(--title-color);
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.talk-venue {
+  margin: 0 0 .6rem 0;
+  color: var(--text-color);
+}
+
+.talk-actions {
+  display: flex;
+  gap: .5rem;
+  flex-wrap: wrap;
+}
+
+/* Responsive: make the rail lighter on mobile and relax spacing */
+@media (max-width: 640px) {
+  .talks-timeline { padding-left: 22px; }
+  .talks-timeline::before { left: 8px; }
+  .talk-dot { left: -24px; }
+}
+.talk-actions .button.ghost {
+  background: none;                  /* remove filled bg */
+  color: var(--first-color-alt);     /* bold blue */
+  font-weight: 700;
+  border: 1px solid var(--first-color-alt); /* optional subtle outline */
+}
+
+.talk-actions .button.ghost:hover {
+  background: var(--first-color-alt);
+  color: #fff;                       /* invert on hover */
+}
+
+.talk-topic {
+  margin: .25rem 0 .75rem;
+  color: var(--text-color);
+  font-style: italic;
+}
+.talk-topic strong {
+  font-style: normal;
+  color: var(--title-color);
+}
+
+/* 🎨 Moments Gallery Styling */
+#moments-gallery .gallery-swiper {
+  width: 100%;
+  overflow: hidden;                 /* prevents body horizontal scroll */
+}
+
+#moments-gallery .swiper-wrapper {
+  align-items: stretch;             /* make all slides equal height */
+}
+
+#moments-gallery .swiper-slide {
+  display: flex;                    /* allow child img to stretch */
+  height: 220px;                    /* uniform tile height */
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--container-color);
+  box-shadow: 0 2px 10px hsl(var(--hue-color), 40%, 70%, .12);
+}
+
+#moments-gallery .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+
+  /* prevent accidental drag */
+  user-select: none;
+  -webkit-user-drag: none;   /* Safari/Chrome */
+  -webkit-touch-callout: none;
+  pointer-events: none;
+}
+
+/* 🔘 Pagination bullets */
+#moments-gallery .swiper-pagination-bullet {
+  background: var(--first-color-alt);
+  opacity: .4;
+}
+#moments-gallery .swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+/* ⬅️➡️ Navigation arrows */
+#moments-gallery .swiper-button-next,
+#moments-gallery .swiper-button-prev {
+  color: var(--first-color-alt);
+  top: 50%;                         /* center vertically */
+  transform: translateY(-50%);
+}
+
+/* Force the pagination to sit inside the gallery only */
+#moments-gallery .swiper-pagination {
+  bottom: .5rem !important;
+}
+@media (min-width: 1024px) {
+  #moments-gallery .swiper-pagination {
+    bottom: 1rem !important;
+  }
+}
+
+/* Safety: hide pagination everywhere by default, then enable just for gallery */
+.swiper-pagination { display: none !important; }
+#moments-gallery .swiper-pagination { display: block !important; }
+
+
+/* Let horizontal swipes go to Swiper while vertical page scroll still works */
+#moments-gallery .gallery-swiper { touch-action: pan-y; }
+
+/* If your gallery root has class .swiper (v7+) */
+#moments-gallery .swiper { position: relative; }
+
+/* If you’re using the wrapper div you called gallery-swiper */
+#moments-gallery .gallery-swiper { position: relative; }
+
+/* (Older Swiper) */
+#moments-gallery .swiper-container { position: relative; }
+
+/* Place pagination bullets below gallery instead of overlapping */
+#moments-gallery .swiper-pagination {
+  position: relative;   /* instead of absolute */
+  bottom: 0 !important; /* reset */
+  margin-top: 1rem;     /* add space below images */
+  text-align: center;   /* keep centered */
+}
+
+.hobbies-highlight {
+  font-weight: 600;                  /* bold but not screaming */
+  font-size: 1.05rem;                 /* just a bit larger than normal text */
+  color: var(--title-color);          /* same deep blue as your headings */
+  text-align: center;                 /* optional: centers for balance */
+  margin-top: 1.5rem;                 /* extra breathing room */
+}
 
