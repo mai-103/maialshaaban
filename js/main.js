@@ -179,7 +179,7 @@
 
    const GH_OWNER = "mai-103";
    const GH_REPO  = "maialshaaban";
-   const GH_PATH  = "img"; //gallery
+   const GH_PATH  = "img/gallery"; 
  
    const api = `https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/${GH_PATH}`;
    const wrapper = document.querySelector("#moments-gallery #gallery-wrapper");
