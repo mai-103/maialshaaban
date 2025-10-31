@@ -1583,3 +1583,18 @@ background: var(--first-color-alt);
   margin-top: 1.5rem;                 /* extra breathing room */
 }
 
+.news .section-title {
+  color: goldenrod;
+  text-shadow: 0 0 6px rgba(218,165,32,0.5);
+}
+.news-item {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+.news-item p {
+  margin: 0;
+  line-height: 1.6;
+}
+
