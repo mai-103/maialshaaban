@@ -2,7 +2,7 @@
 :root {
   --header-height: 3rem;
     /* Colors */
-    --hue-color: 197; /* ✅ baby blue hue */
+    --hue-color: 197; /* baby blue hue */
 
     --first-color: hsl(var(--hue-color), 76%, 66%);        /* main baby blue */
     --first-color-second: hsl(var(--hue-color), 76%, 66%); /* lighter variant */
